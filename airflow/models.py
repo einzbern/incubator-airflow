@@ -1102,6 +1102,7 @@ class TaskInstance(Base, LoggingMixin):
         :return: shell command that can be used to run the task instance
         """
         iso = execution_date.isoformat()
+        # cmd = ["/Users/wenhaoxu/private/RED/incubator-airflow/venv/bin/python", "/Users/wenhaoxu/private/RED/incubator-airflow/airflow/bin/airflow", "run", str(dag_id), str(task_id), str(iso)]
         cmd = ["airflow", "run", str(dag_id), str(task_id), str(iso)]
         cmd.extend(["--mark_success"]) if mark_success else None
         cmd.extend(["--pickle", str(pickle_id)]) if pickle_id else None

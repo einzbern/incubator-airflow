@@ -93,7 +93,7 @@ class ExternalTaskSensor(BaseSensorOperator):
         if self.external_task_id:
             TI = TaskInstance
 
-            count = session.query(TI).filter(
+            count = session.query(TI.task_id).filter(
                 TI.dag_id == self.external_dag_id,
                 TI.task_id == self.external_task_id,
                 TI.state.in_(self.allowed_states),
