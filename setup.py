@@ -324,11 +324,15 @@ def do_setup():
             'sqlalchemy>=1.1.15, <1.2.0',
             'tabulate>=0.7.5, <=0.8.2',
             'tenacity==4.8.0',
-            'thrift>=0.9.2',
+            #'thrift>=0.9.2',
             'tzlocal>=1.4',
             'unicodecsv>=0.14.1',
             'werkzeug>=0.14.1, <0.15.0',
             'zope.deprecation>=4.0, <5.0',
+	    #
+	    'sqlparse',
+    	    'boto3',
+	    'thrift==0.11.0',
         ],
         setup_requires=[
             'docutils>=0.14, <1.0',
